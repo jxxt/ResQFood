@@ -102,3 +102,46 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+
+
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  .footer-section {
+    margin: 10px;
+  }
+  .footer-section h3 {
+    color: #f8f9fa;
+  }
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  .footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer-section ul li a:hover {
+    color: #f8f9fa;
+  }
+  .contact-info, .social-icons {
+    display: flex;
+    align-items: center;
+  }
+  .social-icons img {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+  }
