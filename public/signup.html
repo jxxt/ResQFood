@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-
-    <link rel="stylesheet" href="login.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Page</title>
+<link rel="stylesheet" href="login.css">
 </head>
-
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="./index.html"><img src="../assets/logo.png" alt="Logo"></a>
+            <img src="logo.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="index.html">About Us</a></li>
-            <li><a href="login.html">News</a></li>
-            <li><a href="https://docs.google.com/forms/d/e/...">Feedback</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="login.html"><b>Login</b></a></li>
+            <li><a href="contactus.html"><b>Contact Us</b></a></li>
+            <li><a href="feedback.html"><b>FeedBack</b></a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="signup-container">
-            <h2>Sign Up</h2>
-            <form id="signup-form" action="#" method="post">
-                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
-                <input type="text" id="email" name="email" placeholder="Email" required>
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <input type="submit" value="Sign Up">
-                <p class="error-message" id="error-message"></p>
-            </form>
-            <div class="login-link">
-                <p>Already have an account? <a href="login.html" target="_blank">Login</a>.</p>
-            </div>
+<div class="container">
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form id="signup-form" action="#" method="post">
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name" required>
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+            <p class="error-message" id="error-message"></p>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="login.html" target="_blank">Login</a>.</p>
         </div>
     </div>
+</div>
 </body>
-
 </html>
