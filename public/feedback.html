@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feedback</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-    .feedback-section {
-        text-align: center;
-        margin-top: 20px;
-    }
-    .feedback-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .feedback-question {
-        margin-bottom: 20px;
-        text-align: left;
-    }
-    .feedback-question label {
-        display: block;
-        
-    }
-    
-    
-    .feedback-question textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    .feedback-submit {
-        text-align: center;
-    }
-    .feedback-submit input[type="submit"] {
-        width: 200px;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        background-color: #8a2be2;
-        color: white;
-        cursor: pointer;
-    }
-    .feedback-submit input[type="submit"]:hover {
-        background-color: #7a1be0;
-    }
-    
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color:  #a7c957;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
 
-.logo img {
-    height: 50px; 
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Quicksand", sans-serif;
+            font-weight: bolder;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-.nav-links li {
-    margin-right: 20px;
-}
+        .feedback-section {
+            text-align: center;
+            margin-top: 20px;
+        }
 
-.nav-links li a {
-    text-decoration: none;
-    color: #333;
-}
-.contact-image {
-        position: relative;
-    }
-    .contact-image img {
-        width: 100%;
-        height: auto;
-    }
+        .feedback-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-</style>
+        .feedback-question {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .feedback-container label {
+            display: inline-block;
+            margin-right: 10px;
+            /* Adjust this value to your preference */
+        }
+
+
+        .feedback-question textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .feedback-submit {
+            text-align: center;
+        }
+
+        .feedback-submit input[type="submit"] {
+            width: 200px;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #8a2be2;
+            color: white;
+            cursor: pointer;
+        }
+
+        .feedback-submit input[type="submit"]:hover {
+            background-color: #7a1be0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #a7c957;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .contact-image {
+            position: relative;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
@@ -105,206 +127,209 @@
         </ul>
     </nav>
     <div class="contact-image">
-        <img src="https://imgs.search.brave.com/SSPWsd5qmRe3-ukkuhLv2zk4KB-HrncJi1-V-a68rmg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9l/dmFsdWF0aW9uLWZl/ZWRiYWNrLWN1c3Rv/bWVyLXNtaWxleS1y/ZXNwb25zZV81Mzg3/Ni0xMjMwMTEuanBn/P3NpemU9NjI2JmV4/dD1qcGc" alt="Contact Us">
+        <img src="https://imgs.search.brave.com/SSPWsd5qmRe3-ukkuhLv2zk4KB-HrncJi1-V-a68rmg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9l/dmFsdWF0aW9uLWZl/ZWRiYWNrLWN1c3Rv/bWVyLXNtaWxleS1y/ZXNwb25zZV81Mzg3/Ni0xMjMwMTEuanBn/P3NpemU9NjI2JmV4/dD1qcGc"
+            alt="Contact Us">
     </div>
     <div class="feedback-section">
-        <div class="feedback-container">
-        <h2>Feedback Form</h2>
-        <div class="feedback-form">
-            <form action="#" method="post">
-                <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q1">Question 1: How satisfied are you with our service?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q1" name="q1" value="very_satisfied">
-                <label for="q1">Very Satisfied</label>
-                <input type="radio" id="q1" name="q1" value="satisfied">
-                <label for="q1">Satisfied</label>
-                <input type="radio" id="q1" name="q1" value="neutral">
-                <label for="q1">Neutral</label>
-                <input type="radio" id="q1" name="q1" value="unsatisfied">
-                <label for="q1">Unsatisfied</label>
-                <input type="radio" id="q1" name="q1" value="very_unsatisfied">
-                <label for="q1">Very Unsatisfied</label>
-                </div>
+        <div class="feedback-container" style="margin-top: 20px;">
+            <h2>Feedback Form</h2>
+            <div class="feedback-form">
+                <form action="/feedback" method="post">
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q1">Question 1: How satisfied are you with our service?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q1" name="q1" value="very_satisfied">
+                                <label for="q1">Very Satisfied</label>
+                                <input type="radio" id="q1" name="q1" value="satisfied">
+                                <label for="q1">Satisfied</label>
+                                <input type="radio" id="q1" name="q1" value="neutral">
+                                <label for="q1">Neutral</label>
+                                <input type="radio" id="q1" name="q1" value="unsatisfied">
+                                <label for="q1">Unsatisfied</label>
+                                <input type="radio" id="q1" name="q1" value="very_unsatisfied">
+                                <label for="q1">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q2">Question 2: How likely are you to recommend us to a friend?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q2" name="q2" value="very_likely">
+                                <label for="q2">Very Likely</label>
+                                <input type="radio" id="q2" name="q2" value="likely">
+                                <label for="q2">Likely</label>
+                                <input type="radio" id="q2" name="q2" value="neutral">
+                                <label for="q2">Neutral</label>
+                                <input type="radio" id="q2" name="q2" value="unlikely">
+                                <label for="q2">Unlikely</label>
+                                <input type="radio" id="q2" name="q2" value="very_unlikely">
+                                <label for="q2">Very Unlikely</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q3">Question 3: How would you rate the quality of our products?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q3" name="q3" value="excellent">
+                                <label for="q3">Excellent</label>
+                                <input type="radio" id="q3" name="q3" value="good">
+                                <label for="q3">Good</label>
+                                <input type="radio" id="q3" name="q3" value="fair">
+                                <label for="q3">Fair</label>
+                                <input type="radio" id="q3" name="q3" value="poor">
+                                <label for="q3">Poor</label>
+                                <input type="radio" id="q3" name="q3" value="very_poor">
+                                <label for="q3">Very Poor</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q4">Question 4: How satisfied are you with the delivery process?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q4" name="q4" value="very_satisfied">
+                                <label for="q4">Very Satisfied</label>
+                                <input type="radio" id="q4" name="q4" value="satisfied">
+                                <label for="q4">Satisfied</label>
+                                <input type="radio" id="q4" name="q4" value="neutral">
+                                <label for="q4">Neutral</label>
+                                <input type="radio" id="q4" name="q4" value="unsatisfied">
+                                <label for="q4">Unsatisfied</label>
+                                <input type="radio" id="q4" name="q4" value="very_unsatisfied">
+                                <label for="q4">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q5">Question 5: How user-friendly is our website?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q5" name="q5" value="very_user_friendly">
+                                <label for="q5">Very User-Friendly</label>
+                                <input type="radio" id="q5" name="q5" value="user_friendly">
+                                <label for="q5">User-Friendly</label>
+                                <input type="radio" id="q5" name="q5" value="neutral">
+                                <label for="q5">Neutral</label>
+                                <input type="radio" id="q5" name="q5" value="not_user_friendly">
+                                <label for="q5">Not User-Friendly</label>
+                                <input type="radio" id="q5" name="q5" value="very_not_user_friendly">
+                                <label for="q5">Very Not User-Friendly</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q6">Question 6: How satisfied are you with our customer service?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q6" name="q6" value="very_satisfied">
+                                <label for="q6">Very Satisfied</label>
+                                <input type="radio" id="q6" name="q6" value="satisfied">
+                                <label for="q6">Satisfied</label>
+                                <input type="radio" id="q6" name="q6" value="neutral">
+                                <label for="q6">Neutral</label>
+                                <input type="radio" id="q6" name="q6" value="unsatisfied">
+                                <label for="q6">Unsatisfied</label>
+                                <input type="radio" id="q6" name="q6" value="very_unsatisfied">
+                                <label for="q6">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q7">Question 7: How would you rate the variety of our products?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q7" name="q7" value="excellent">
+                                <label for="q7">Excellent</label>
+                                <input type="radio" id="q7" name="q7" value="good">
+                                <label for="q7">Good</label>
+                                <input type="radio" id="q7" name="q7" value="fair">
+                                <label for="q7">Fair</label>
+                                <input type="radio" id="q7" name="q7" value="poor">
+                                <label for="q7">Poor</label>
+                                <input type="radio" id="q7" name="q7" value="very_poor">
+                                <label for="q7">Very Poor</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q8">Question 8: How satisfied are you with our pricing?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q8" name="q8" value="very_satisfied">
+                                <label for="q8">Very Satisfied</label>
+                                <input type="radio" id="q8" name="q8" value="satisfied">
+                                <label for="q8">Satisfied</label>
+                                <input type="radio" id="q8" name="q8" value="neutral">
+                                <label for="q8">Neutral</label>
+                                <input type="radio" id="q8" name="q8" value="unsatisfied">
+                                <label for="q8">Unsatisfied</label>
+                                <input type="radio" id="q8" name="q8" value="very_unsatisfied">
+                                <label for="q8">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q9">Question 9: How satisfied are you with our communication?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q9" name="q9" value="very_satisfied">
+                                <label for="q9">Very Satisfied</label>
+                                <input type="radio" id="q9" name="q9" value="satisfied">
+                                <label for="q9">Satisfied</label>
+                                <input type="radio" id="q9" name="q9" value="neutral">
+                                <label for="q9">Neutral</label>
+                                <input type="radio" id="q9" name="q9" value="unsatisfied">
+                                <label for="q9">Unsatisfied</label>
+                                <input type="radio" id="q9" name="q9" value="very_unsatisfied">
+                                <label for="q9">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="q10">Question 10: How satisfied are you with our overall service?</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <input type="radio" id="q10" name="q10" value="very_satisfied">
+                                <label for="q10">Very Satisfied</label>
+                                <input type="radio" id="q10" name="q10" value="satisfied">
+                                <label for="q10">Satisfied</label>
+                                <input type="radio" id="q10" name="q10" value="neutral">
+                                <label for="q10">Neutral</label>
+                                <input type="radio" id="q10" name="q10" value="unsatisfied">
+                                <label for="q10">Unsatisfied</label>
+                                <input type="radio" id="q10" name="q10" value="very_unsatisfied">
+                                <label for="q10">Very Unsatisfied</label>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="feedback-container" style="margin-top: 20px;">
+                        <div class="feedback-question">
+                            <label for="comment">Additional Comments (Optional):</label>
+                            <div class="feedback-container" style="margin-top: 20px;">
+                                <textarea id="comment" name="comment"
+                                    placeholder="Enter your comments here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
-            </br>
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q2">Question 2: How likely are you to recommend us to a friend?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q2" name="q2" value="very_likely">
-                <label for="q2">Very Likely</label>
-                <input type="radio" id="q2" name="q2" value="likely">
-                <label for="q2">Likely</label>
-                <input type="radio" id="q2" name="q2" value="neutral">
-                <label for="q2">Neutral</label>
-                <input type="radio" id="q2" name="q2" value="unlikely">
-                <label for="q2">Unlikely</label>
-                <input type="radio" id="q2" name="q2" value="very_unlikely">
-                <label for="q2">Very Unlikely</label>
-            </div>
-        </div>
-    </div>
-            </br>  
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q3">Question 3: How would you rate the quality of our products?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q3" name="q3" value="excellent">
-                <label for="q3">Excellent</label>
-                <input type="radio" id="q3" name="q3" value="good">
-                <label for="q3">Good</label>
-                <input type="radio" id="q3" name="q3" value="fair">
-                <label for="q3">Fair</label>
-                <input type="radio" id="q3" name="q3" value="poor">
-                <label for="q3">Poor</label>
-                <input type="radio" id="q3" name="q3" value="very_poor">
-                <label for="q3">Very Poor</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q4">Question 4: How satisfied are you with the delivery process?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q4" name="q4" value="very_satisfied">
-                <label for="q4">Very Satisfied</label>
-                <input type="radio" id="q4" name="q4" value="satisfied">
-                <label for="q4">Satisfied</label>
-                <input type="radio" id="q4" name="q4" value="neutral">
-                <label for="q4">Neutral</label>
-                <input type="radio" id="q4" name="q4" value="unsatisfied">
-                <label for="q4">Unsatisfied</label>
-                <input type="radio" id="q4" name="q4" value="very_unsatisfied">
-                <label for="q4">Very Unsatisfied</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q5">Question 5: How user-friendly is our website?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q5" name="q5" value="very_user_friendly">
-                <label for="q5">Very User-Friendly</label>
-                <input type="radio" id="q5" name="q5" value="user_friendly">
-                <label for="q5">User-Friendly</label>
-                <input type="radio" id="q5" name="q5" value="neutral">
-                <label for="q5">Neutral</label>
-                <input type="radio" id="q5" name="q5" value="not_user_friendly">
-                <label for="q5">Not User-Friendly</label>
-                <input type="radio" id="q5" name="q5" value="very_not_user_friendly">
-                <label for="q5">Very Not User-Friendly</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q6">Question 6: How satisfied are you with our customer service?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q6" name="q6" value="very_satisfied">
-                <label for="q6">Very Satisfied</label>
-                <input type="radio" id="q6" name="q6" value="satisfied">
-                <label for="q6">Satisfied</label>
-                <input type="radio" id="q6" name="q6" value="neutral">
-                <label for="q6">Neutral</label>
-                <input type="radio" id="q6" name="q6" value="unsatisfied">
-                <label for="q6">Unsatisfied</label>
-                <input type="radio" id="q6" name="q6" value="very_unsatisfied">
-                <label for="q6">Very Unsatisfied</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q7">Question 7: How would you rate the variety of our products?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q7" name="q7" value="excellent">
-                <label for="q7">Excellent</label>
-                <input type="radio" id="q7" name="q7" value="good">
-                <label for="q7">Good</label>
-                <input type="radio" id="q7" name="q7" value="fair">
-                <label for="q7">Fair</label>
-                <input type="radio" id="q7" name="q7" value="poor">
-                <label for="q7">Poor</label>
-                <input type="radio" id="q7" name="q7" value="very_poor">
-                <label for="q7">Very Poor</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q8">Question 8: How satisfied are you with our pricing?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q8" name="q8" value="very_satisfied">
-                <label for="q8">Very Satisfied</label>
-                <input type="radio" id="q8" name="q8" value="satisfied">
-                <label for="q8">Satisfied</label>
-                <input type="radio" id="q8" name="q8" value="neutral">
-                <label for="q8">Neutral</label>
-                <input type="radio" id="q8" name="q8" value="unsatisfied">
-                <label for="q8">Unsatisfied</label>
-                <input type="radio" id="q8" name="q8" value="very_unsatisfied">
-                <label for="q8">Very Unsatisfied</label>
-            </div>
-        </div>
-    </div>
-            </br>   
-            <div class="feedback-container">
-                <div class="feedback-question">
-                <label for="q9">Question 9: How satisfied are you with our communication?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q9" name="q9" value="very_satisfied">
-                <label for="q9">Very Satisfied</label>
-                <input type="radio" id="q9" name="q9" value="satisfied">
-                <label for="q9">Satisfied</label>
-                <input type="radio" id="q9" name="q9" value="neutral">
-                <label for="q9">Neutral</label>
-                <input type="radio" id="q9" name="q9" value="unsatisfied">
-                <label for="q9">Unsatisfied</label>
-                <input type="radio" id="q9" name="q9" value="very_unsatisfied">
-                <label for="q9">Very Unsatisfied</label>
-            </div>
-        </div>
-    </div>
-            </br>  
-            <div class="feedback-container">
-                <div class="feedback-question"> 
-                <label for="q10">Question 10: How satisfied are you with our overall service?</label>
-                <div class="feedback-container">
-                <input type="radio" id="q10" name="q10" value="very_satisfied">
-                <label for="q10">Very Satisfied</label>
-                <input type="radio" id="q10" name="q10" value="satisfied">
-                <label for="q10">Satisfied</label>
-                <input type="radio" id="q10" name="q10" value="neutral">
-                <label for="q10">Neutral</label>
-                <input type="radio" id="q10" name="q10" value="unsatisfied">
-                <label for="q10">Unsatisfied</label>
-                <input type="radio" id="q10" name="q10" value="very_unsatisfied">
-                <label for="q10">Very Unsatisfied</label>
-            </div>
-        </div>
-    </div>
-            </br>  
-            <div class="feedback-container">
-                <div class="feedback-question"> 
-                <label for="comment">Additional Comments (Optional):</label>
-                <div class="feedback-container">
-                <textarea id="comment" name="comment" placeholder="Enter your comments here..."></textarea>
-            </div>
-        </div>
-    </div>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
     </div>
 
 </body>
+
 </html>
