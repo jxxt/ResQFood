@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Quicksand", sans-serif;
+            font-weight: bolder;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-section {
+            text-align: center;
+        }
+
+        .contact-image {
+            position: relative;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 400px;
+        }
+
+        .contact-overlay {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            transform: translateY(-50%);
+            color: Black;
+            padding: 40px;
+            background-color: transparent;
+            font-size: 50px;
+        }
+
+        .contact-form-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .contact-info,
+        .contact-form {
+            width: 48%;
+        }
+
+        .contact-info address {
+            margin-bottom: 15px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #a7c957;
+            color: black;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #a7c957;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #a7c957;
+            ;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assets/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><b>Home</b></a></li>
+            <li><a href="login.html"><b>Login</b></a></li>
+            <li><a href="contactus.html"><b>Contact Us</b></a></li>
+            <li><a href="feedback.html"><b>FeedBack</b></a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-section">
+        <div class="contact-image">
+            <img src="https://img.freepik.com/premium-photo/email-support-communication-with-blue-contact-icons-against-gray-wall_157125-14812.jpg?size=626&ext=jpg"
+                alt="Contact Us">
+            <div class="contact-overlay">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+        <div class="contact-form-section">
+            <div class="contact-info">
+                <ul>
+                    <h1>Let's talk with us</h1>
+                    <p>
+                    <h3>Questions, comments, or suggestions?</br> Simply fill in the form and we’ll be in touch
+                        shortly.</br></h3>
+                    </p>
+                    <address><b>Address:</b>1055 Arthur ave Elk Groot, 67.<br>
+                        New Palmas South Carolina.
+                    </address>
+                    <p><b>Contact Number:</b>📞 +1 234 678 9108 99</p>
+                    <p><b>Email ID: </b>📧 Contact@moralizer.com</p>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form action="/contactus" method="post">
+                    <input type="text" name="firstname" placeholder="First Name*" required>
+                    <input type="text" name="lastname" placeholder="Last Name*" required>
+                    <input type="email" name="email" placeholder="Email*" required>
+                    <input type="tel" name="phone" placeholder="Phone Number*" required>
+                    <textarea name="message" placeholder="Your message..." rows="5" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
