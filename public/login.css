@@ -5,6 +5,16 @@
     font-weight: bolder;
 }
 
+.container {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.container.fade-in {
+    opacity: 1;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;

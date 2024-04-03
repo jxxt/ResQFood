@@ -4,144 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ResQFood</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>ResQFood</title>
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./assets/logo.png" alt="Logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html"><b>Home</b></a></li>
-            <li><a href="signup.html"><b>Sign Up</b></a></li>
-            <li><a href="contactus.html"><b>Contact Us</b></a></li>
-            <li><a href="./feedback.html"><b>FeedBack</b></a></li>
-        </ul>
-    </nav>
-    <div class="hero">
-        <h1>Fill Plates, Not Landfills</h1>
-        <p>Help us in our mission to eliminate hunger and reduce food waste</p>
-        <button class="hero-btn"><a href="./login.html">Get Involved</a></button>
-    </div>
-    <div class="services">
-        <div>
-            <div class="title">
-                We Rescue Food
-            </div>
-            <div class="image">
-                <img src="./assets/1.jpg" alt="" class="service-img">
-            </div>
-            <div class="desc">
-                Using our web-based app, we engage volunteers to transfer fresh food surpluses from local businesses
-                to social service agencies serving the food insecure.
-            </div>
-        </div>
-        <div>
-            <div class="title">
-                We Help the Environment
-            </div>
-            <div class="image">
-                <img src="./assets/2.jpg" alt="" class="service-img">
-            </div>
-            <div class="desc">
-                Food waste remains one of the top solutions to global warming. Currently, food waste contributes 8
-                percent of total global greenhouse gas emissions.
-            </div>
-        </div>
-        <div>
-            <div class="title">
-                We Create Community
-            </div>
-            <div class="image">
-                <img src="./assets/3.jpg" alt="" class="service-img">
-            </div>
-            <div class="desc">
-                Our model empowers communities to serve themselves with the support of our app. All food donors,
-                rescuers, and agency partners are members of the communities where we operate.
-            </div>
-        </div>
-    </div>
-    <div class="numbers-section">
-        <img src="./assets/num.png" alt="">
-    </div>
-    <div class="get-involved">
-        <div class="heading">
-            join us
-        </div>
-        <div class="content">
-            <div>
-                <div>JOIN OUR MOVEMENT</div>
-                <div>BRING FOOD RESCUE US TO YOUR COMMUNITY</div>
-            </div>
-            <div><img src="./assets/4.jpg" alt="" class="get"></div>
-            <div>
-                <div>BECOME A FOOD DONOR OR AGENCY PARTNER</div>
-                <div>WANT TO KNOW MORE?</div>
-            </div>
-        </div>
-    </div>
-    <div class="news-update">
-        <div class="heading">
-            news updates
-        </div>
-        <div class="news-content">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+<body style="background-color: #FEFAE0;">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"><img src="./assets/logo.png" alt="" style="height: 60px;"></a>
 
-    <div class="contact-us">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>CONTACT US</h3>
-                <p><strong>Phone:</strong> (800) 280-3298</p>
-                <p><strong>Address:</strong> 1127 High Ridge Rd, Suite 338, Stamford, CT 06905</p>
-                <p><strong>Email:</strong> <a href="mailto:info@foodrescue.us">info@foodrescue.us</a></p>
-                <div class="social-icons">
-                    <!-- Icons would be added here -->
-                    <!-- <img src="facebook-icon.png" alt="Facebook">
-                        <img src="twitter-icon.png" alt="Twitter">
-                        <img src="instagram-icon.png" alt="Instagram">
-                        <img src="linkedin-icon.png" alt="LinkedIn">
-                        <img src="tiktok-icon.png" alt="TikTok"> -->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link" style="color: #000000;">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./signup.html" class="nav__link" style="color: #000000;">Sign Up</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./contactus.html" class="nav__link" style="color: #000000;">Contact Ua</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./feedback.html" class="nav__link" style="color: #000000;">Feedback</a>
+                    </li>
+                </ul>
+
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="home" id="home">
+            <img src="assets/img/home1.jpeg" alt="" class="home__img">
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__data-subtitle"></span>
+                    <h1 class="home__data-title" style="color: #283618;"><u>Fill Plates, Not
+                            Landfills</u><br> Help us to
+                        eliminate
+                        hunger <br> and reduce food waste </h1>
+                    <a href="#" class="button" style="background-color: #ff7e67;">Get Involved</a>
+
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="about section" id="about">
+            <div class="about__container container grid">
+                <div class="about__data">
+                    <h2 class="section__title about__title" style="font-size: 40px;">We Help the Environment</h2>
+                    <p class="about__description">Food waste remains one of the top solutions to global warming.
+                        Currently, food waste contributes 8 percent of total global greenhouse gas emissions.
+                    </p>
+
+                </div>
+
+                <div class="about__img">
+                    <div class="about__img-overlay"">
+                        <img src=" assets/img/about1.jpg" alt="" class="about__img-one"
+                        style="height: 300px; width: 600px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="discover section" id="discover">
+            <h2 class="section__title" style="font-size: 80px;">Our Services</h2>
+
+            <div class="discover__container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/discover1.jpg" alt="" class="discover__img"
+                            style="height: 300px; width: 900px">
+                        <div class="discover__data">
+                            <h2 class="discover__title"></h2>
+                            <span class="discover__description" style="font-weight: bolder; font-size:20px">We Rescue
+                                Food</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="discover__card swiper-slide">
+                        <img src="assets/img/discover4.jpg" alt="" class="discover__img"
+                            style="height: 250px; width: 800px">
+                        <div class="discover__data">
+                            <h2 class="discover__title"></h2>
+                            <span class="discover__description" style="font-weight: bolder; font-size:20px">We Create
+                                Community</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="experience section">
+            <h2 class="section__title" style="font-size: 60px;">ResQFood Lifetime Numbers</h2>
+
+            <div class="experience__container container grid">
+                <div class="experience__content grid">
+                    <div class="experience__data">
+                        <h2 class="experience__number" style="font-size: 100px;">2M</h2>
+                        <span class="experience__description" style="font-size: 40px;">Meals Provided</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number" style="font-size: 100px;">1M</h2>
+                        <span class="experience__description" style="font-size: 30px;">kgs of food saved<br>from getting
+                            wasted</span>
+                    </div>
+
+                    <div class="experience__data">
+                        <h2 class="experience__number" style="font-size: 100px;">10,000</h2>
+                        <span class="experience__description" style="font-size: 40px;">Volunteers</span>
+                    </div>
+                </div>
+
+                <div class="experience__img grid">
+                    <div class="experience__overlay">
+                        <img src="assets/img/experience1.jpeg" alt="" class="experience__img-one">
+                    </div>
+
+                    <div class="experience__overlay">
+                        <img src="assets/img/experience2.jpg" alt="" class="experience__img-two">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">ResQFood</h3>
+                    <p class="footer__description">Fill Plates, Not Landfills
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">About Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Features</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">New & Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Company</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Team</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Future Plans</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Become a member</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">FAQs</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Support Center</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Contact Us</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="footer-section">
-                <h3>ADDITIONAL RESOURCES</h3>
-                <ul>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Financials</a></li>
-                    <li><a href="#">Impact Reports</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms Of Service</a></li>
-                    <li><a href="#">Non-Discrimination Policy</a></li>
-                </ul>
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2024 All rigths reserved.</p>
+                <div class="footer__terms">
+                    <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                </div>
             </div>
-
-            <div class="footer-section">
-                <h3>ABOUT US</h3>
-                <p>Food Rescue US is dedicated to eliminating hunger and food waste (keeping food out of landfills
-                    and
-                    reducing greenhouse gasses). We engage volunteers and food donors through our proprietary
-                    web-based
-                    app to directly transfer nutritious excess food to social service agencies serving the food
-                    insecure.</p>
-            </div>
-
         </div>
+    </footer>
 
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var homeContainer = document.querySelector('.home__container');
+            homeContainer.classList.add('fade-in');
+
+            ScrollReveal().reveal('.about__container', {
+                duration: 1000,
+                delay: 100,
+                origin: 'bottom',
+                distance: '50px',
+                easing: 'ease-in-out',
+                reset: true
+            });
+
+            ScrollReveal().reveal('.discover__container', {
+                duration: 1000,
+                delay: 100,
+                origin: 'bottom',
+                distance: '50px',
+                easing: 'ease-in-out',
+                reset: true
+            });
+
+            ScrollReveal().reveal('.experience__container', {
+                duration: 1000,
+                delay: 100,
+                origin: 'bottom',
+                distance: '50px',
+                easing: 'ease-in-out',
+                reset: true
+            });
+        });
+
+    </script>
 </body>
-
-
 
 </html>

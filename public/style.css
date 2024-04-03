@@ -317,3 +317,21 @@ padding: 0 20px 0 20px;
 	height: auto;
 	margin-right: 10px;
 }
+
+/* Add animation class for the about section */
+.about__container.fade-in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Add animation class for the discover section */
+.discover__container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add animation class for the experience section */
+.experience__container.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
