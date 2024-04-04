@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <title>ResQFood</title>
+
+    <!-- <style>
+        .experience__numberr {
+            font-size: 100px;
+        }
+
+        .experience__description {
+            font-size: 40px;
+        }
+    </style> -->
 </head>
 
 <body style="background-color: #FEFAE0;">
@@ -27,7 +37,7 @@
                         <a href="./signup.html" class="nav__link" style="color: #000000;">Sign Up</a>
                     </li>
                     <li class="nav__item">
-                        <a href="./contactus.html" class="nav__link" style="color: #000000;">Contact Ua</a>
+                        <a href="./contactus.html" class="nav__link" style="color: #000000;">Contact Us</a>
                     </li>
                     <li class="nav__item">
                         <a href="./feedback.html" class="nav__link" style="color: #000000;">Feedback</a>
@@ -101,7 +111,7 @@
             <h2 class="section__title" style="font-size: 80px;">Our Services</h2>
 
             <div class="discover__container container swiper-container">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" style="width: 100%;">
 
                     <div class="discover__card swiper-slide">
                         <img src="assets/img/discover1.jpg" alt="" class="discover__img"
@@ -117,7 +127,7 @@
 
                     <div class="discover__card swiper-slide">
                         <img src="assets/img/discover4.jpg" alt="" class="discover__img"
-                            style="height: 250px; width: 800px">
+                            style="height: 250px; width: 1000px">
                         <div class="discover__data">
                             <h2 class="discover__title"></h2>
                             <span class="discover__description" style="font-weight: bolder; font-size:20px">We Create
@@ -146,7 +156,7 @@
                     </div>
 
                     <div class="experience__data">
-                        <h2 class="experience__number" style="font-size: 100px;">10,000</h2>
+                        <h2 class="experience__numberr" style="font-size: 100px;">10,000</h2>
                         <span class="experience__description" style="font-size: 40px;">Volunteers</span>
                     </div>
                 </div>
@@ -288,7 +298,24 @@
             });
         });
 
+        const numberElement = document.querySelector('.experience__numberr');
+
+        function countToTenThousand() {
+            let count = 0;
+            const interval = setInterval(() => {
+                count++;
+                numberElement.textContent = count.toLocaleString();
+                if (count === 2000) {
+                    clearInterval(interval);
+                }
+            }, 1);
+        }
+
+        countToTenThousand();
+
     </script>
+
+
 </body>
 
 </html>
