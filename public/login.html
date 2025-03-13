@@ -6,10 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* Add these styles if they're not already in your login.css file */
+        #email {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 15px 0;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .login-container {
+            max-width: 400px;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -24,14 +61,14 @@
             <li><a href="feedback.html"><b>FeedBack</b></a></li>
         </ul>
     </nav>
+
     <div class="container">
         <div class="login-container">
             <h2>Login</h2>
-            <form id="login-form" action="/login" method="post">
-                <input type="text" id="username" name="username" placeholder="Username" required>
-                <input type="password" id="password" name="password" placeholder="Password" required>
-                <input type="submit" value="Login">
-                <p class="error-message" id="error-message"></p>
+            <form id="login-form">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="submit" value="Send Magic Link">
+                <p class="message" id="message"></p>
             </form>
             <div class="signup-link">
                 <p>Don't have an account? <a href="signup.html">Sign up</a>.</p>
@@ -39,15 +76,72 @@
         </div>
     </div>
 
-
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var container = document.querySelector('.container');
             container.classList.add('fade-in');
+
+            // Handle form submission
+            document.getElementById("login-form").addEventListener("submit", async function (event) {
+                event.preventDefault();
+
+                const email = document.getElementById("email").value;
+                const messageBox = document.getElementById("message");
+
+                try {
+                    // Use the hardcoded API URL
+                    const response = await fetch('http://127.0.0.1:8000/send-magic-link', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email })
+                    });
+
+                    if (response.ok) {
+                        messageBox.textContent = "A magic link has been sent to your email.";
+                        messageBox.style.color = "green";
+                    } else {
+                        const errorData = await response.json();
+                        messageBox.textContent = errorData.detail || "Failed to send magic link. Try again.";
+                        messageBox.style.color = "red";
+                    }
+                } catch (error) {
+                    messageBox.textContent = "An error occurred. Make sure the API server is running.";
+                    messageBox.style.color = "red";
+                    console.error("Error:", error);
+                }
+            });
+
+            // Check for magic link verification
+            async function verifyMagicLink() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const token = urlParams.get("token");
+
+                if (token) {
+                    try {
+                        // Use the hardcoded API URL
+                        const response = await fetch('http://127.0.0.1:8000/verify-magic-link', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ token })
+                        });
+
+                        if (response.ok) {
+                            document.body.innerHTML = "<h2 style='text-align:center; margin-top: 50px;'>Verified! Redirecting...</h2>";
+                            setTimeout(() => { window.location.href = "index.html"; }, 2000);
+                        } else {
+                            const errorData = await response.json();
+                            document.body.innerHTML = `<h2 style='text-align:center; margin-top: 50px; color:red;'>${errorData.detail || "Invalid or expired link."}</h2>`;
+                        }
+                    } catch (error) {
+                        document.body.innerHTML = "<h2 style='text-align:center; margin-top: 50px; color:red;'>Verification error. Make sure the API server is running.</h2>";
+                        console.error("Error:", error);
+                    }
+                }
+            }
+
+            verifyMagicLink();
         });
-
     </script>
-</body>
 
+</body>
 </html>

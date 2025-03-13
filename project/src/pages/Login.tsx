@@ -1,15 +1,77 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setMessage('Magic link functionality will be implemented with backend integration');
+    setMessage('');
+    
+    try {
+      // Use the API URL from the FastAPI backend
+      const response = await fetch('http://127.0.0.1:8000/send-magic-link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      if (response.ok) {
+        setMessage('A magic link has been sent to your email.');
+        setIsSuccess(true);
+      } else {
+        const errorData = await response.json();
+        setMessage(errorData.detail || 'Failed to send magic link. Try again.');
+        setIsSuccess(false);
+      }
+    } catch (error) {
+      setMessage('An error occurred. Make sure the API server is running.');
+      setIsSuccess(false);
+      console.error('Error:', error);
+    }
   };
+
+  // Check for magic link verification on page load
+  useEffect(() => {
+    async function verifyMagicLink() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const token = urlParams.get('token');
+
+      if (token) {
+        try {
+          const response = await fetch('http://127.0.0.1:8000/verify-magic-link', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token })
+          });
+
+          if (response.ok) {
+            // Display verification success message
+            setMessage('Verified! Redirecting...');
+            setIsSuccess(true);
+            
+            // Redirect to the home page after successful verification
+            // Using the URL that matches what the backend expects
+            setTimeout(() => { window.location.href = 'http://localhost:5173'; }, 2000);
+          } else {
+            const errorData = await response.json();
+            setMessage(errorData.detail || 'Invalid or expired link.');
+            setIsSuccess(false);
+          }
+        } catch (error) {
+          setMessage('Verification error. Make sure the API server is running.');
+          setIsSuccess(false);
+          console.error('Error:', error);
+        }
+      }
+    }
+
+    verifyMagicLink();
+  }, []);
 
   return (
     <div className="min-h-[80vh] bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -67,10 +129,16 @@ export default function Login() {
           </form>
 
           {message && (
-            <div className="mt-4 text-center text-sm text-emerald-600">
+            <div className={`mt-4 text-center text-sm ${isSuccess ? 'text-emerald-600' : 'text-red-600'}`}>
               {message}
             </div>
           )}
+
+          <div className="mt-6">
+            <p className="text-center text-sm text-gray-600">
+              Don't have an account? <a href="/signup" className="font-medium text-emerald-600 hover:text-emerald-500">Sign up</a>
+            </p>
+          </div>
         </div>
       </motion.div>
     </div>
